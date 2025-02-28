@@ -64,6 +64,13 @@ namespace Demo.Data.Models
         [DataType(DataType.PhoneNumber)]//[Not-Mapped] Just For Display - To Display values of this property in PhoneNumber Format/view.
         public string? PhoneNumber { get; set; }
 
+        [NotMapped]//Mean That This Property Will not mapped as column in DB when mapping - it's Derived Attribute - We calc it's value based on another property
+        public double NetSalary { get { return Salary-(Salary * .2); } }
+
+        //or make Derived Att with another way.
+
+        public double GetNetSalary => Salary-(Salary * .2);//Without put any attributes - it will not mapped - Name of it must start with "Get" to say that it will not mapped.
+
         //Note => 
         //Those Data Annotations [Properties] that are work as Validations or Displays =>  Work only When You work on ASP.NET Core Application Not Console Application
         //Mean That like if you Assign To "Email" property value "Hamada" it will not throw Exception.
