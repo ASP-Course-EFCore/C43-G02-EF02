@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Data.Migrations
 {
     [DbContext(typeof(CompanyDbContext))]
-    [Migration("20250302110946_AddDepartmentsTableWithFluentAPIs")]
-    partial class AddDepartmentsTableWithFluentAPIs
+    [Migration("20250302121431_AddDepartmentsTableWithFluentAPIsMigrationClasses")]
+    partial class AddDepartmentsTableWithFluentAPIsMigrationClasses
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

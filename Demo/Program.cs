@@ -94,8 +94,35 @@ namespace Demo
 
             #endregion
 
-            #region MyRegion
+            #region Part 03 Mapping Ways -> 3.2- (Fluent APIs- Configuration classes)
 
+            ///Mapping Fluent API Configuration Through Separate Configuration Classes.
+            ///Using The IEntityTypeConfiguration<T> interface.
+            ///This Improve Code Organization And Maintainability.
+            ///
+            ///In this Way, Instead of make configuration for All Models/Tables inside one function "OnModelCreating()" that called when "Add-Migration" to apply configurations inside it
+            ///We make Configuration Class For Each Entity/Model/Table and make this class implement the interface IEntityTypeConfiguration<T>
+            ///T -> Represent the Type/Class/Table 
+            ///And When Implement this interface, it has method "Configure(EntityTypeBuilder<T> builder)"
+            ///That i need to provide implementation for it - Make configuration of class/Table inside it.
+            ///
+            ///And Then To Apply This Configuration on the class/Table that you make
+            ///Go To The Class "DbContext" And inside the "OnModelCreating()"
+            ///Add this Line -> modelBuilder.ApplyConfiguration<Employee>(new EmployeeConfiguration());
+            ///This method<T> is generic,T represent the type/Model/Class/Table and take object from any class implement the generic interface "IEntityTypeConfiguration<T>"
+            ///
+            ///So for each configuration class -> you must add this line of applying configuration inside the "OnModelCreating()" method inside "DbContext" class.
+            ///
+            ///You Can Automatically Let when Add new Configuration Class and make configuration in it by using the "Reflection" in C#.
+            ///Let EF Automatically Apply this Configuration made in the current executing Assembly
+            ///By add this line in the method OnModelCreating() ->  modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly())
+            ///In Run Time EF Core Will Apply Configuration For All Classes that implement the interface IEntityTypeConfiguration<T> in the current executing Assembly.
+            ///But use this only when you have large scale project that in it many configuration Classes.
+            ///If there are like 2 or 3 configuration class -> add line of apply[Make object from the config class] Configuration for each config class inside the method "OnModelCreating()"
+            ///
+            ///We always use the last way of mapping => FluentAPIs With Configuration Classes because it is organized
+            ///DataAnnotations is readable but it make the model class file Crowded [زحمه]
+            
             #endregion
         }
     }
