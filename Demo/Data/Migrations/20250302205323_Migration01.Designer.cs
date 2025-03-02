@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Data.Migrations
 {
     [DbContext(typeof(CompanyDbContext))]
-    [Migration("20250302121431_AddDepartmentsTableWithFluentAPIsMigrationClasses")]
-    partial class AddDepartmentsTableWithFluentAPIsMigrationClasses
+    [Migration("20250302205323_Migration01")]
+    partial class Migration01
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,6 +63,7 @@ namespace Demo.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmpName")
@@ -74,6 +75,7 @@ namespace Demo.Data.Migrations
                         .HasColumnName("EmployeeName");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Salary")

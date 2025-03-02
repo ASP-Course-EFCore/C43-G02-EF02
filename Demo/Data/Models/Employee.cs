@@ -89,13 +89,14 @@ namespace Demo.Data.Models
 
         public int? Age { get; set; }
 
-        public string? Email { get; set; }
+        [Required]
+        public string Email { get; set; }
 
         public string? password { get; set; }
 
-        public string? PhoneNumber { get; set; }
+        public required string PhoneNumber { get; set; }
 
-        //[NotMapped]//Mean That This Property Will not mapped as column in DB when mapping - it's Derived Attribute - We calc it's value based on another property
+        [NotMapped]//Mean That This Property Will not mapped as column in DB when mapping - it's Derived Attribute - We calc it's value based on another property
         public double NetSalary { get { return Salary - (Salary * .2); } }
 
         //or make Derived Att with another way.

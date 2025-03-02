@@ -60,6 +60,7 @@ namespace Demo.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmpName")
@@ -71,6 +72,7 @@ namespace Demo.Data.Migrations
                         .HasColumnName("EmployeeName");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Salary")
