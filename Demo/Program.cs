@@ -44,8 +44,9 @@ namespace Demo
 
             #endregion
 
-            #region Part 02 Mapping Ways (Fluent APIs)
+            #region Part 02 Mapping Ways -> 3.1- (Fluent APIs) by override the function "OnModelCreating()" in the "DbContext" Class and configure classes inside it.
 
+            /// - Use Fluent APIs Way by override the function "OnModelCreating()" in the "DbContext" Class and configure classes inside it.
             ///It's Mapping Way used to configure entity Properties/Columns ,Relationships.
             ///it gives you more control over the database schema and relationships compared to Data Annotations.
             ///There are some configuration on entity properties that i can't configure it using Convention or Data Annotations Way
@@ -90,6 +91,10 @@ namespace Demo
             ///
             ///After Make this => I add new property in the "DbContext" Class of type "DbSet<Department> Departments"
             ///To map this class that came from the Remote/External project inside the DB.
+
+            #endregion
+
+            #region MyRegion
 
             #endregion
         }

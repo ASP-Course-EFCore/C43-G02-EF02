@@ -38,7 +38,7 @@ namespace Demo.Data.Models
             optionsBuilder.UseSqlServer("Server = .; Database = Company; Trusted_Connection = true; Encrypt = True; TrustServerCertificate = True");//Trust App To connect on sql server service throw Windows authentication.
         }
 
-        //3- By Fluent APIs => Define The Fluent APIs Configuration inside the "OnModelCreating" in Your "DbContext" class
+        //3.1- By Fluent APIs => Define The Fluent APIs Configuration inside the "OnModelCreating" in Your "DbContext" class
         //that inherit it from the base "DbContext" Class and override it to make the configurations
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
