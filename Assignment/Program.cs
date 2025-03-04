@@ -264,6 +264,66 @@ namespace Assignment
 
             #endregion
 
+            #region 05 - CRUD on Topics table 
+
+            #region 01.1 - ADD/Insert
+
+            //Topic topic = new Topic()
+            //{
+            //    Name = "Algorithms"
+            //};
+
+            //Console.WriteLine(dbContext.Entry(topic).State);//Detached
+            //dbContext.Add(topic);
+            //Console.WriteLine(dbContext.Entry(topic).State);//Added
+            //dbContext.SaveChanges();
+            //Console.WriteLine(dbContext.Entry(topic).State);//UnChanged
+
+            #endregion
+
+            #region 01.2 - Retrieve
+
+            //var topic = dbContext.Topics.AsNoTracking().FirstOrDefault(t => t.Name == "Algorithms");
+
+            //if (topic is not null)
+            //{
+            //    Console.WriteLine($"ID:{topic.Top_id} - Name:{topic.Name}");
+            //}
+
+            #endregion
+
+            #region 01.3 - Update
+
+            //var topic = dbContext.Topics.FirstOrDefault(t => t.Name == "Algorithms");
+
+            //if (topic is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Unchanged
+            //    topic.Name = "DataStructure";
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Unchanged
+            //}
+
+            #endregion
+
+            #region 01.4 - Delete
+
+            //var topic = dbContext.Topics.FirstOrDefault(t => t.Name == "DataStructure");
+
+            //if (topic is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Unchanged
+            //    dbContext.Remove(topic);
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Deleted
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(topic).State);//Detached
+            //}
+
+            #endregion
+
+            #endregion
+
         }
     }
 }

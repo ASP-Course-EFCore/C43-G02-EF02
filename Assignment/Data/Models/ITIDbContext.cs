@@ -16,6 +16,7 @@ namespace Assignment.Data.Models
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Topic> Topics { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -42,6 +43,7 @@ namespace Assignment.Data.Models
             });
 
             modelBuilder.ApplyConfiguration<Course>(new CourseConfiguration());
+            modelBuilder.ApplyConfiguration<Topic>(new TopicConfiguration());
         }
     }
 }
