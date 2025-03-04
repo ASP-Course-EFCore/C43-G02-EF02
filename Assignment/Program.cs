@@ -201,6 +201,69 @@ namespace Assignment
 
             #endregion
 
+            #region 03 - CRUD on Department table 
+
+            #region 01.1 - ADD/Insert
+
+            //Course course = new Course()
+            //{
+            //    Name = "C++",
+            //    Duration = "120h",
+            //    Description = "Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla",
+            //    Top_Id = 5
+            //};
+
+            //Console.WriteLine(dbContext.Entry(course).State);//Detached
+            //dbContext.Add(course);
+            //Console.WriteLine(dbContext.Entry(course).State);//Added
+            //dbContext.SaveChanges();
+            //Console.WriteLine(dbContext.Entry(course).State);//UnChanged
+
+            #endregion
+
+            #region 01.2 - Retrieve
+
+            //var course = dbContext.Courses.AsNoTracking().FirstOrDefault(c => c.Name == "C++");
+
+            //if (course is not null)
+            //{
+            //    Console.WriteLine($"ID:{course.ID} - Name:{course.Name} - Duration:{course.Duration} - Description:{course.Description}");
+            //}
+
+            #endregion
+
+            #region 01.3 - Update
+
+            //var course = dbContext.Courses.FirstOrDefault(c => c.Name == "C++");
+
+            //if (course is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(course).State);//Unchanged
+            //    course.Name = "JAVA";
+            //    Console.WriteLine(dbContext.Entry(course).State);//Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(course).State);//Unchanged
+            //}
+
+            #endregion
+
+            #region 01.4 - Delete
+
+            //var course = dbContext.Courses.FirstOrDefault(c => c.Name == "JAVA");
+
+            //if (course is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(course).State);//Unchanged
+            //    dbContext.Remove(course);
+            //    Console.WriteLine(dbContext.Entry(course).State);//Deleted
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(course).State);//Detached
+            //}
+
+            #endregion
+
+            #endregion
+
         }
     }
 }

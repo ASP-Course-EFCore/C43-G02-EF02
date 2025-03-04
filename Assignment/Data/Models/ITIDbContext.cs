@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Assignment.Data.ConfigurationClasses;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Assignment.Data.Models
         public DbSet<Student> Students { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -38,6 +40,8 @@ namespace Assignment.Data.Models
                  .HasDefaultValueSql("GetDate()")
                  .HasAnnotation("DateType", "Date");
             });
+
+            modelBuilder.ApplyConfiguration<Course>(new CourseConfiguration());
         }
     }
 }
