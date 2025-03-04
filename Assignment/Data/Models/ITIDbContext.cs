@@ -17,6 +17,7 @@ namespace Assignment.Data.Models
         public DbSet<Department> Departments { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Topic> Topics { get; set; }
+        public DbSet<Stud_Course> Stud_Courses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

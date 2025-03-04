@@ -324,6 +324,68 @@ namespace Assignment
 
             #endregion
 
+            #region 06 - CRUD on Stud_Courses table 
+
+            #region 01.1 - ADD/Insert
+
+            //Stud_Course stud = new Stud_Course()
+            //{
+            //    Course_Id = 3,
+            //    Stud_Id = 14,
+            //    Grade = 15.5m
+            //};
+
+            //Console.WriteLine(dbContext.Entry(stud).State);//Detached
+            //dbContext.Add(stud);
+            //Console.WriteLine(dbContext.Entry(stud).State);//Added
+            //dbContext.SaveChanges();
+            //Console.WriteLine(dbContext.Entry(stud).State);//UnChanged
+
+            #endregion
+
+            #region 01.2 - Retrieve
+
+            //var stud = dbContext.Stud_Courses.AsNoTracking().FirstOrDefault(s => s.Grade == 15.5m);
+
+            //if (stud is not null)
+            //{
+            //    Console.WriteLine($"Stud_Id:{stud.Stud_Id} - Course_Id:{stud.Course_Id} - Grade:{stud.Grade}");
+            //}
+
+            #endregion
+
+            #region 01.3 - Update
+
+            //var stud = dbContext.Stud_Courses.FirstOrDefault(s => s.Grade == 15.5m);
+
+            //if (stud is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Unchanged
+            //    stud.Grade = 50.8m;
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Unchanged
+            //}
+
+            #endregion
+
+            #region 01.4 - Delete
+
+            //var stud = dbContext.Stud_Courses.FirstOrDefault(s => s.Grade == 15.5m);
+
+            //if (stud is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Unchanged
+            //    dbContext.Remove(stud);
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Deleted
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(stud).State);//Detached
+            //}
+
+            #endregion
+
+            #endregion
+
         }
     }
 }
