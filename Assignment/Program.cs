@@ -75,6 +75,71 @@ namespace Assignment
             #endregion
 
             #endregion
+
+            #region 02 - CRUD on Instructors table 
+
+            #region 01.1 - ADD/Insert
+
+            //Instructor instructor = new Instructor()
+            //{
+            //    Name = "Eslam Elsaadany",
+            //    Address = "Mansoura",
+            //    Bonus = 1000,
+            //    HourRate = 50,
+            //    Salary = 10000,
+            //    DeptId = 5
+            //};
+            //Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Detached
+            //dbContext.Add<Instructor>(instructor);
+            //Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Added
+            //dbContext.SaveChanges();
+            //Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Unchanged
+
+            #endregion
+
+            #region 01.2 - Retrieve
+
+            //var instructor = dbContext.Instructors.AsNoTracking().FirstOrDefault(i => i.Address == "Mansoura");
+
+            //if(instructor is not null)
+            //  Console.WriteLine($"Name:{instructor.Name} - Address:{instructor.Address} - HourRate:{instructor.HourRate} - Salary:{instructor.Salary:c}" );
+
+            #endregion
+
+            #region 01.3 - Update
+
+            //var instructor = dbContext.Instructors.FirstOrDefault(i => i.Address == "Mansoura");
+
+            //if(instructor is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//UnChanged
+            //    instructor.Address = "TANTA";
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//UnChanged
+            //}
+
+            #endregion
+
+            #region 01.4 - Delete
+
+            //var instructor = (from inst in dbContext.Instructors
+            //                  where inst.Address == "Mansoura"
+            //                  select inst).FirstOrDefault();
+
+            //if(instructor is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//UnChanged
+            //    dbContext.Remove<Instructor>(instructor);
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Deleted
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Detached
+            //}
+
+            #endregion
+
+            #endregion
+
         }
     }
 }

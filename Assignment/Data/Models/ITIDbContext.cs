@@ -12,6 +12,7 @@ namespace Assignment.Data.Models
     {
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -15,13 +15,14 @@ namespace Assignment.Data.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InstId { get; set; }
-        [DataType("varchar(20)", ErrorMessage = "Maximum Length is 20 chars ")]
+        [Column(TypeName = "varchar(20)")]
         [MinLength(3, ErrorMessage = "Min Length is 3 chars")]
         public string Name { get; set; }
         public int Bonus { get; set; }
         [DisplayName("Net_Salary")]
+        [DataType(DataType.Currency)]
         public int Salary { get; set; }
-        [DataType("varchar")]
+        [Column(TypeName = "varchar")]
         [MaxLength(50)]
         [MinLength(5)]
         public string? Address { get; set; }
