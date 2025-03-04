@@ -141,7 +141,7 @@ namespace Assignment
 
             #endregion
 
-            #region 03 - CRUD on Department table 
+            #region 03 - CRUD on Departments table 
 
             #region 01.1 - ADD/Insert
 
@@ -201,7 +201,7 @@ namespace Assignment
 
             #endregion
 
-            #region 03 - CRUD on Department table 
+            #region 04 - CRUD on Courses table 
 
             #region 01.1 - ADD/Insert
 
