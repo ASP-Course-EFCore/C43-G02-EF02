@@ -1,5 +1,6 @@
 ﻿using Assignment.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Assignment
 {
@@ -134,6 +135,66 @@ namespace Assignment
             //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Deleted
             //    dbContext.SaveChanges();
             //    Console.WriteLine(dbContext.Entry<Instructor>(instructor).State);//Detached
+            //}
+
+            #endregion
+
+            #endregion
+
+            #region 03 - CRUD on Department table 
+
+            #region 01.1 - ADD/Insert
+
+            //Department department = new Department()
+            //{
+            //    DepartmentName = "HR",
+            //};
+
+            //Console.WriteLine(dbContext.Entry(department).State);//Detached
+            //dbContext.Add(department);
+            //Console.WriteLine(dbContext.Entry(department).State);//Added
+            //dbContext.SaveChanges();
+            //Console.WriteLine(dbContext.Entry(department).State);//UnChanged
+
+            #endregion
+
+            #region 01.2 - Retrieve
+
+            //var department = dbContext.Departments.AsNoTracking().FirstOrDefault(D => D.DepartmentName == "HR");
+
+            //if (department is not null)
+            //{
+            //    Console.WriteLine($"DepartmentId:{department.DepartmentId} - DepartmentName:{department.DepartmentName} Ins_Id:{department.Ins_Id}- HiringDate:{department.HiringDate}");
+            //}
+
+            #endregion
+
+            #region 01.3 - Update
+
+            //var department = dbContext.Departments.FirstOrDefault(D => D.DepartmentName == "HR");
+
+            //if(department is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(department).State);//Unchanged
+            //    department.DepartmentName = "Al-Azhar";
+            //    Console.WriteLine(dbContext.Entry(department).State);//Modified
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(department).State);//Unchanged
+            //}
+
+            #endregion
+
+            #region 01.4 - Delete
+
+            //var department = dbContext.Departments.FirstOrDefault(D => D.DepartmentName == "HR");
+
+            //if (department is not null)
+            //{
+            //    Console.WriteLine(dbContext.Entry(department).State);//Unchanged
+            //    dbContext.Remove(department);
+            //    Console.WriteLine(dbContext.Entry(department).State);//Deleted
+            //    dbContext.SaveChanges();
+            //    Console.WriteLine(dbContext.Entry(department).State);//Detached
             //}
 
             #endregion
